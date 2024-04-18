@@ -46,6 +46,13 @@ function main() {
 	const mySphereGeometry = new THREE.SphereGeometry( .5, 20, 10 );
 	const mySphere2Geometry = new THREE.SphereGeometry( .1, 20, 10 );
 
+	const loader = new THREE.TextureLoader();
+	const texture = loader.load( 'https://threejs.org/manual/examples/resources/images/wall.jpg' );
+	texture.colorSpace = THREE.SRGBColorSpace;
+	const materialT = new THREE.MeshBasicMaterial( {
+		map: texture
+	} );
+
     //Create a material that we can use for the box
 	//const material = new THREE.MeshBasicMaterial( { color: 0x44aa88 } ); // greenish blue
     //Changed the material as MeshBasicMagtrial is not affected by light
@@ -73,9 +80,14 @@ function main() {
     //Create the 3 cubes of different colors
     const cubes = [
 		makeInstance( geometry, 0x8844aa, - 2, 0 ),
-		makeInstance( geometry, 0xaa8844, 2, 0 )
-		
+		//makeInstance( geometry, 0xaa8844, 2, 0 )
 	];
+	const cube2 = new THREE.Mesh( geometry, materialT );
+	scene.add( cube2 );
+	cube2.position.x = 2;
+	cube2.position.y = 0;
+	cubes.push( cube2 ); // add to our list of cubes to rotate
+
 	//Create 2 cones
 	const cones = [
 		makeInstance( myConeGeometry, 0x44aa88, -1, 0 ),
