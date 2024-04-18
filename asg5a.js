@@ -88,7 +88,7 @@ function main() {
 	const cube2 = new THREE.Mesh( geometry, materialT );
 	scene.add( cube2 );
 	cube2.position.x = -2.5;
-	cube2.position.y = 0;
+	cube2.position.y = 1.25;
 	cubes.push( cube2 ); // add to our list of cubes to rotate
 
 	//Create 2 cones
