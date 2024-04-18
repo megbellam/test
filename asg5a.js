@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+
 //As of version r147 the preferred way to use three.js is via es6 modules and import maps.
 //We have to setup the modules and imports in HTML and JS files
 //We have to upload our code to a server if we use modules in our code
@@ -84,7 +87,7 @@ function main() {
 	];
 	const cube2 = new THREE.Mesh( geometry, materialT );
 	scene.add( cube2 );
-	cube2.position.x = 3;
+	cube2.position.x = 2;
 	cube2.position.y = 0;
 	cubes.push( cube2 ); // add to our list of cubes to rotate
 
