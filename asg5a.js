@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import {MTLLoader} from 'three/addons/loaders/MTLLoader.js';
 
 //As of version r147 the preferred way to use three.js is via es6 modules and import maps.
 //We have to setup the modules and imports in HTML and JS files
@@ -120,7 +121,7 @@ function main() {
 	{
 
 		const objLoader = new OBJLoader();
-		objLoader.load( 'https://threejs.org/manual/examples/resources/models/windmill/windmill.obj', ( root ) => {
+		objLoader.load( '../obj/chair/mychair.obj', ( root ) => {
 			root.scale.setScalar(0.2); //size it to be small
 			scene.add( root );
 			root.position.x = 2.5;
