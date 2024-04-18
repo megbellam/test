@@ -33,6 +33,7 @@ function main() {
 
     //Create a scene for putting our cubes
 	const scene = new THREE.Scene();
+	scene.background = new THREE.Color( 'black' );
 
     //Add a Light to our scene
     {
@@ -60,6 +61,16 @@ function main() {
 		map: texture
 	} );
 
+	{
+
+		const objLoader = new OBJLoader();
+		objLoader.load( 'https://threejs.org/manual/examples/resources/models/windmill/windmill.obj', ( root ) => {
+
+			scene.add( root );
+
+		} );
+
+	}
     //Create a material that we can use for the box
 	//const material = new THREE.MeshBasicMaterial( { color: 0x44aa88 } ); // greenish blue
     //Changed the material as MeshBasicMagtrial is not affected by light
