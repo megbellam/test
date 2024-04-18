@@ -121,9 +121,9 @@ function main() {
 
 		const objLoader = new OBJLoader();
 		objLoader.load( 'https://threejs.org/manual/examples/resources/models/windmill/windmill.obj', ( root ) => {
-			root.scale.setScalar(0.02); //size it to be small
+			root.scale.setScalar(0.01); //size it to be small
 			scene.add( root );
-			root.position.x = 2.5;
+			root.position.x = 3;
 			root.position.y = 0;
 
 		} );
