@@ -136,7 +136,7 @@ function main() {
    		});
 
 	}
-}
+
 
     //Add the object we have created to the scene and specify if needed its position, orientation, scale
 	//scene.add( cube );
