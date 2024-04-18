@@ -12,6 +12,6 @@ newmtl 11785_Necklace
 	Kd 1.0000 1.0000 1.0000
 	Ks 0.1350 0.1350 0.1350
 	Ke 0.0000 0.0000 0.0000
-	map_Ka 11785_Necklace_diffuse.jpg
-	map_Kd 11785_Necklace_diffuse.jpg
-	map_refl Map__3_Gradient Ramp.jpg
+	map_Ka necklace.jpg
+	map_Kd necklace.jpg
+	map_refl necklace.jpg
