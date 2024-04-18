@@ -124,6 +124,9 @@ function main() {
 		const mtlLoader = new MTLLoader();
   		mtlLoader.load('https://megbellam.github.io/test/necklace.mtl', (mtl) => {
     		mtl.preload();
+			for (const material of Object.values(mtl.materials)) {
+				material.side = THREE.DoubleSide;
+			}
     		objLoader.setMaterials(mtl);
 
 		objLoader.load( 'https://megbellam.github.io/test/necklace.obj', ( root ) => {
