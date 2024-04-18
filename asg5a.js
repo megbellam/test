@@ -121,7 +121,7 @@ function main() {
 	{
 
 		const objLoader = new OBJLoader();
-		objLoader.load( 'necklace.obj', ( root ) => {
+		objLoader.load( 'https://megbellam.github.io/test/necklace.obj', ( root ) => {
 			//root.scale.setScalar(0.2); //size it to be small
 			scene.add( root );
 			root.position.x = 2.5;
