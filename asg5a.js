@@ -117,6 +117,17 @@ function main() {
 
 	];
 
+	{
+
+		const objLoader = new OBJLoader();
+		objLoader.load( 'https://threejs.org/manual/examples/resources/models/windmill/windmill.obj', ( root ) => {
+
+			scene.add( root );
+
+		} );
+
+	}
+	
     //Add the object we have created to the scene and specify if needed its position, orientation, scale
 	//scene.add( cube );
 
