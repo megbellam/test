@@ -25,15 +25,14 @@ function main() {
     //The Camera sits on the +Z axis and looks towards the -Z axis, with +Y being up
     //As we put our object (a cube) at the origin, we are going to set the camera Z position to 2
     //so that the camera can see the cube.
-	camera.position.set( 0, 10, 20 );
+	camera.position.z = 2;
 
 	const controls = new OrbitControls( camera, canvas );
 	controls.target.set( 0, 5, 0 );
 	controls.update();
-
+	
     //Create a scene for putting our cubes
 	const scene = new THREE.Scene();
-	scene.background = new THREE.Color( 'black' );
 
     //Add a Light to our scene
     {
@@ -60,7 +59,6 @@ function main() {
 	const materialT = new THREE.MeshBasicMaterial( {
 		map: texture
 	} );
-
 
     //Create a material that we can use for the box
 	//const material = new THREE.MeshBasicMaterial( { color: 0x44aa88 } ); // greenish blue
