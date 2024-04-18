@@ -124,7 +124,7 @@ function main() {
 			root.scale.setScalar(0.15); //size it to be small
 			scene.add( root );
 			root.position.x = 2.5;
-			root.position.y = 0;
+			root.position.y = -1;
 
 		} );
 
