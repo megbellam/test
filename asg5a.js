@@ -121,6 +121,11 @@ function main() {
 	{
 
 		const objLoader = new OBJLoader();
+		const mtlLoader = new MTLLoader();
+  		mtlLoader.load('https://megbellam.github.io/test/necklace.mtl', (mtl) => {
+    		mtl.preload();
+    		objLoader.setMaterials(mtl);
+
 		objLoader.load( 'https://megbellam.github.io/test/necklace.obj', ( root ) => {
 			root.scale.setScalar(.5);
 			scene.add( root );
@@ -128,8 +133,10 @@ function main() {
 			root.position.y = -1;
 
 		} );
+   		});
 
 	}
+}
 
     //Add the object we have created to the scene and specify if needed its position, orientation, scale
 	//scene.add( cube );
