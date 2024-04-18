@@ -27,10 +27,6 @@ function main() {
     //so that the camera can see the cube.
 	camera.position.z = 2;
 
-	const controls = new OrbitControls( camera, canvas );
-	controls.target.set( 0, 5, 0 );
-	controls.update();
-	
     //Create a scene for putting our cubes
 	const scene = new THREE.Scene();
 
