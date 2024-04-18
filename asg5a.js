@@ -123,11 +123,13 @@ function main() {
 		objLoader.load( 'https://threejs.org/manual/examples/resources/models/windmill/windmill.obj', ( root ) => {
 
 			scene.add( root );
+			root.position.x = 2.5;
+			root.position.y = 0;
 
 		} );
 
 	}
-	
+
     //Add the object we have created to the scene and specify if needed its position, orientation, scale
 	//scene.add( cube );
 
